@@ -112,7 +112,7 @@
         position: relative;
         bottom: 1em;
         max-height: 180px;
-        box-shadow: -2px 2px 2px black;
+        box-shadow: 0 0 3px 1px black;
     }
 
     .about-me {
