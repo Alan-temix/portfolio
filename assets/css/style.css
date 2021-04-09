@@ -126,8 +126,6 @@
     a.button-1 {
         text-decoration: none;
         border: .5px solid black;
-        position: relative;
-        top: 1em;
         display: block;
         margin: .5em;
         height: 2em;
@@ -141,8 +139,6 @@
     a.button-transparent {
         text-decoration: none;
         border: .5px solid black;
-        position: relative;
-        top: 1em;
         display: block;
         margin: .5em;
         height: 2em;
