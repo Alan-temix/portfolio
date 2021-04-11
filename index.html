@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="./assets/css/desktop-design.css">
-    <link rel="stylesheet" href="./assets/css/tablet-design.css">
-    <link rel="stylesheet" href="./assets/css/mobile-design.css">
+    <script src="https://kit.fontawesome.com/5df9ec1229.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#icon').click(function() {
+            $('ul').toggleClass('show');
+        })
+    });
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <button class="show-menu" id="alerta()">
-        MENU
-    </button>
     <header>
-        <ul class="column-4">
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
+        <nav>
+            <label class="logo">LOGO</label>
+            <ul class="column-4">
+                <li><a class="active" href="#">HOME</a></li>
+                <li><a class="active-relative" href="#">ABOUT ME</a></li>
+                <li><a class="active-relative" href="#Education">PORTFOLIO</a></li>
+                <li><a class="active-relative" href="#">EDUCATION</a></li>
+            </ul>
+            <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+        </nav>
     </header>
         <section class="cover-page exception">
             <div class="column-6">
@@ -99,19 +110,20 @@
                 <p class="extends">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur repellendus optio. <a href="#">Ver más...</a></p>
             </div>
         </section>
-        <section class="education-section">
+        <section id="Education" class="education-section">
+            <h2>EDUCACION</h2>
             <div class="card-education">
-                <h2>Academlo</h2>
+                <h3>Academlo</h3>
                 <img src="./assets/img/academlo.png" alt="Academlo">
                 <a>Desarrollo Web FullStack</a>
             </div>
             <div class="card-education">
-                <h2>Free Code Camp</h2>
+                <h3>Free Code Camp</h3>
                 <img src="./assets/img/free-code-camp.png" alt="Free Code Camp">
-                <a href="https://www.freecodecamp.org/">Responsive Web Design</a>
+                <a>Responsive Web Design</a>
             </div>
             <div class="card-education">
-                <h2>Universidad Jean Piaget</h2>
+                <h3>Universidad Jean Piaget</h3>
                 <img src="./assets/img/jean-piaget.png" alt="jean-piaget">
                 <a>Ingenieria en sistemas computacionales</a>
             </div>
