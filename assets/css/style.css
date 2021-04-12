@@ -11,6 +11,7 @@ nav {
     width: 100%;
     max-height: 80px;
     z-index: 99;
+    box-shadow: 0 0 3px 1px black;
 }
 
 label.logo {
@@ -19,6 +20,7 @@ label.logo {
     color: black;
     padding: 0 100px;
     line-height: 80px;
+    padding-left: 3.2%;
 }
 
 nav ul {
@@ -28,7 +30,6 @@ nav ul {
 }
 
 nav li {
-    /* float: left; */
     display: inline-block;
     margin: 0 8px;
     line-height: 80px;  
@@ -60,15 +61,9 @@ nav #icon {
 }
 
 .cover-page {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: 1px solid black;
-    border-radius: 10px;
+    display: flex;
     position: relative;
     bottom: 1em;
-    box-shadow: 0 0 3px 1px black;
-    max-width: 300px;
     margin-top: 110px;
     padding: 1em;
 }
@@ -84,34 +79,28 @@ nav #icon {
     color: black;
 }
 
-.cover-page img {
-    position: relative;
+.cover-page img.column-6 {
+    position: unset;
     width: 30%;
-    float: right;
-    top: -150px;
+    float: none;
+    display: inline-block;
+    margin-right: 5%;
+    margin-left: 20%;
 }
 
 .contact-me {
     position: relative;
     margin-bottom: 3%;
     width: 70%;
-    padding-left: 15%;
+    padding-left: 3%;
 }
 
 .contact-me .img-contact {
     width: 15%;
 }
 
-.about-me {
-    /*  */
-}
-
 .container-about-me {
     margin: 5% 3%;
-}
-
-.button-section {
-    /*  */
 }
 
 a.button-1 {
@@ -138,7 +127,6 @@ a.button-transparent {
     border-radius: 5px;
     color: black;
 }
-
 
 .section-projects {
     padding-left: 11%;
@@ -169,10 +157,6 @@ h2 {
     width: 6em;
 }
 
-.section-projects p.extends {
-        
-}
-
 .column-3 p {
     margin-bottom: 1em;
 }
@@ -183,19 +167,39 @@ h2 {
     padding-bottom: 5%;
 }
 
+section#education h2 {
+    text-align: center;
+}
+
 .card-education {
     padding: 5% 0;
+    margin: 1% auto;
     border: 1px solid black;
-    margin: 1% 0;
+    box-shadow: 0 0 3px 1px black;
+    
+}
+
+.card-education a {
+    width: 33%;
+    margin: 0 auto;
+}
+
+.card-education:last-child {
+    border-right: 1px solid black;
 }
 
 .card-education img {
     width: 30%;
+    height: 55%;
 }
 
 .card-education a {
     display: block;
     text-decoration: none;
+}
+
+.column-4-gde {
+    width: 30%;
 }
 
 .footer-container {
@@ -206,24 +210,9 @@ h2 {
     left: 2em;
 }
 
-/* Estilos especificos */
-@media (max-width: 400px) {
-    .cover-page {
-        max-width: 300px;
-    }
-}
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 910px) {
-    body {
-        /* background-color: red; */
-    }
-
+@media (min-width: 910px) { /*A partir de 910 px se va  ejecutar lo que este en corchetes */
     .cover-page {
         width: 100%;
         margin-top: 110px;
@@ -252,7 +241,6 @@ h2 {
 
     .contact-me {
         width: 40%;
-        /* padding: 0 3.5em; */
         padding-left: 3%;
     }
 
@@ -280,12 +268,29 @@ h2 {
     .section-projects .set {
         padding: 1% 0;
     }
+
+    .container-section p {
+        margin: auto 0;
+    }
+
+    .container-section p.especify {
+        margin-left: 1%
+    }
+
+    section#education h2 {
+        text-align: center;
+    }
+
+    .education-section {
+        display: flex;
+        padding-left: 1%;
+    }
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1048px) { /* Se va a ejecutar lo que este dentro de corchetes hasta llegar a los 1048px, despues de 1048px se deje de ejecutar */
     label.logo {
         font-size: 32px;
-        padding-left: 60px;
+        padding-left: 6%;
     }
 
     nav ul {
@@ -297,7 +302,8 @@ h2 {
     }
 }
 
-@media (max-width: 909px) {
+
+@media (max-width: 909px) { /*Se va a ejecutar lo que este en corchetes hasta que la pantalla llegue a 909px */
     nav #icon {
         display: block;
     }
@@ -322,16 +328,24 @@ h2 {
 
     nav a {
         font-size: 20px;
-        /* background-color: tomato; */
     }
 
     a.active,a:hover {
         border: none;
-        color: #3498db;
     }
 
     nav ul.show {
         left: 0;
+    }
+
+    .column-4-gde {
+        width: 100%;
+    }
+
+    .card-education {
+        border-radius: none;
+        border: none;
+        box-shadow: none;
     }
 
 }
