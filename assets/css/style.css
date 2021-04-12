@@ -1,6 +1,5 @@
 body {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
-
 }
 
 nav {
@@ -58,44 +57,20 @@ nav #icon {
     margin-right: 40px;
     cursor: pointer;
     display: none;
-}   
+}
 
-.contact-me {
+.cover-page {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
     position: relative;
-    margin-bottom: 3%;
-    width: 70%;
-    padding-left: 15%;
-}
-
-.section-projects {
-    /* border: 1px solid red; */
-    padding-left: 11%;
-    padding-right: 11%;
-}
-
-.exception {
-    /* display: flex; */
-}
-
-.img-projects {
-    /* width: 8em; */
-}
-
-.img-contact {
-    width: 15%;
-}
-
-.show-menu {
-    /* display: none; */
-}
-
-/* Desde aqui todo es responsive, arriba originalmente era el diseño "normal" */
-
-.cover-page img {
-    position: relative;
-    width: 30%;
-    float: right;
-    top: -150px;
+    bottom: 1em;
+    box-shadow: 0 0 3px 1px black;
+    max-width: 300px;
+    margin-top: 110px;
+    padding: 1em;
 }
 
 .column-6 p {
@@ -109,51 +84,34 @@ nav #icon {
     color: black;
 }
 
-.show-menu {
-    /*  */
-    display: block;
-    width: 100%;
-    height: 3em;
-    position: fixed;
-    background-color: white;
-    color: black;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 10px;
-    z-index: 11;
-}
-
-.show-menu:active {
-    background-color:white;
-    color: black;
-}
-
-
-.cover-page {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: 1px solid black;
-    border-radius: 10px;
+.cover-page img {
     position: relative;
-    bottom: 1em;
-    box-shadow: 0 0 3px 1px black;
-    max-width: 300px;
-    margin-top: 30%;
-    padding: 1em;
+    width: 30%;
+    float: right;
+    top: -150px;
+}
+
+.contact-me {
+    position: relative;
+    margin-bottom: 3%;
+    width: 70%;
+    padding-left: 15%;
+}
+
+.contact-me .img-contact {
+    width: 15%;
 }
 
 .about-me {
-    /* border: 1px solid black;
-    box-shadow: 0 0 3px 1px black;
-    border-radius: 10px; */
-    padding-left: 11%;
-    padding-right: 11%;
+    /*  */
 }
 
 .container-about-me {
     margin: 5% 3%;
+}
+
+.button-section {
+    /*  */
 }
 
 a.button-1 {
@@ -181,8 +139,18 @@ a.button-transparent {
     color: black;
 }
 
+
+.section-projects {
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
 h2 {
     margin-top: 1em;
+}
+
+.set {
+    padding: 3% 0;
 }
 
 .column-3 {
@@ -197,36 +165,19 @@ h2 {
     margin: 0 3px;
 }
 
-.set {
-    padding: 3% 0;
-}
-
-.column-3 > h3 {
-    margin-bottom: .5em;
-}
-
-.column-3 > p {
-    position: relative;
-    top: 4px;
-    width: 40vh;
-    margin-bottom: 1em;
-}
-
-.column-3 a {
-    text-decoration: none;
-}
-
 .img-projects {
     width: 6em;
 }
 
-.my-education-container {
-    width: 80%;
-    height: 30%;
+.section-projects p.extends {
+        
+}
+
+.column-3 p {
+    margin-bottom: 1em;
 }
 
 .education-section {
-    max-width: 200px;
     text-align: center;
     margin: 0 auto;
     padding-bottom: 5%;
@@ -255,11 +206,11 @@ h2 {
     left: 2em;
 }
 
-
-
 /* Estilos especificos */
-@media screen and (max-width: 576px) {
-
+@media (max-width: 400px) {
+    .cover-page {
+        max-width: 300px;
+    }
 }
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -268,8 +219,67 @@ h2 {
 
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 910px) {
+    body {
+        /* background-color: red; */
+    }
 
+    .cover-page {
+        width: 100%;
+        margin-top: 110px;
+        max-width: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        padding: 0;
+    }
+
+    div.column-6 {
+        font-size: 300%;
+        padding-left: 3%;
+        padding-top: .5em;
+    }
+
+    .cover-page img.column-6 {
+        position: unset;
+        width: 30%;
+        float: none;
+        display: inline-block;
+        margin-right: 5%;
+        margin-left: 20%;
+    }
+
+    .contact-me {
+        width: 40%;
+        /* padding: 0 3.5em; */
+        padding-left: 3%;
+    }
+
+    .container-about-me {
+        margin-bottom: 0;
+    }
+
+    .button-section {
+        display: flex;
+        padding: 0 2.5%;
+    }
+
+    .button-section .button-1 {
+        width: 50%;
+    }
+
+    .button-section .button-transparent {
+        width: 50%;
+    }
+
+    .section-projects {
+        padding: 0 3%;
+    }
+
+    .section-projects .set {
+        padding: 1% 0;
+    }
 }
 
 @media (max-width: 1048px) {
@@ -312,6 +322,7 @@ h2 {
 
     nav a {
         font-size: 20px;
+        /* background-color: tomato; */
     }
 
     a.active,a:hover {
@@ -322,6 +333,7 @@ h2 {
     nav ul.show {
         left: 0;
     }
+
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
