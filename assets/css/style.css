@@ -1,10 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Poppins', 'Times New Roman', Times, serif;
 }
 
 nav {
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -12,6 +15,9 @@ nav {
     max-height: 80px;
     z-index: 99;
     box-shadow: 0 0 3px 1px black;
+    background-color: #ffb000;
+    display: flex;
+    justify-content: space-between;
 }
 
 label.logo {
@@ -24,7 +30,6 @@ label.logo {
 }
 
 nav ul {
-    float: right;
     margin-right: 40px;
     list-style-type: none;
 }
@@ -43,6 +48,7 @@ nav a {
     border: 1px solid transparent;
     padding: 7px 10px;
     border-radius: 3px;
+    text-decoration: none;
 }
 
 a.active,a.active-relative:hover {
@@ -131,6 +137,26 @@ a.button-transparent {
 .section-projects {
     padding-left: 11%;
     padding-right: 11%;
+}
+
+section.formulario {
+    background-color: #474d5d;
+    padding: 10% 8%;
+    display: flex;
+    color: white;
+}
+
+section.formulario input {
+    width: 40%;
+    padding: 3%;
+    background-color: #585f73;
+    border: none;
+}
+
+section.formulario textarea {
+    background-color: #585f73;
+    border: none;
+    margin-bottom: 3%;
 }
 
 h2 {

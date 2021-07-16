@@ -6,29 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="https://kit.fontawesome.com/5df9ec1229.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#icon').click(function() {
-            $('ul').toggleClass('show');
-        })
-    });
-    </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/utilities.css">
     <title>Hola soy Alan</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="navegation">
             <label class="logo">LOGO</label>
-            <ul class="column-4">
-                <li><a class="active" href="#">INICIO</a></li>
-                <li><a class="active-relative" href="#">ACERCA DE MI</a></li>
-                <li><a class="active-relative" href="#Education">PORTAFOLIO</a></li>
-                <li><a class="active-relative" href="#">EDUCACIÓN</a></li>
+            <ul class="">
+                <li><a onclick="changeClass(this)" class="active" href="#">INICIO</a></li>
+                <li><a onclick="changeClass(this)" class="active-relative" href="#">ACERCA DE MI</a></li>
+                <li><a onclick="changeClass(this)" class="active-relative" href="#">CONOCIMIENTO</a></li>
+                <li><a onclick="changeClass(this)" class="active-relative" href="#education">PROYECTOS</a></li>
+                <li><a onclick="changeClass(this)" class="active-relative" href="#">CONTACTAME</a></li>
             </ul>
             <label id="icon">
                 <i class="fas fa-bars"></i>
@@ -110,6 +104,24 @@
                 <p class="extends">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur repellendus optio. <a href="#">Ver más...</a></p>
             </div>
         </section>
+        <section class="formulario">
+            <div>
+                <h4>CONTACT DETAILS</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, animi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sed.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, obcaecati!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, sint.</p>
+            </div>
+            <div class="col-md-8">
+                <h4>Shoot a message!</h4>
+                <form action="./services/sendEmail.php">
+                    <input style="margin-bottom: 2%; margin-right: 2%;" type="text" placeholder="Your name..." />
+                    <input style="margin-bottom: 2%;" type="text" placeholder="Your email..." required />
+                    <textarea style="width: 603px; height: 68px; padding: 3%;" name="" id="" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                    <input type="submit" value="Send Message" />
+                </form>
+            </div>
+        </section>
         <section id="education">
             <h2>EDUCACION</h2>
             <div class="education-section">
@@ -134,5 +146,17 @@
         <footer>
         </footer>
     </section>
+    <script>
+        $(document).ready(function() {
+            $('#icon').click(function() {
+                $('ul').toggleClass('show');
+            })
+        });
+
+        const changeClass = (param) => {
+            param.className = 'active'
+            console.log(document.querySelectorAll('nav a'))
+        }
+    </script>
 </body>
 </html>
