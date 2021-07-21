@@ -35,15 +35,19 @@
                 <h1>Alan Temix</h1>
                 <p>y soy tu</p>
                 <h1>Desarrollador Web</h1>
+                <a href="#"><img src="./assets/img/email.png" alt=""></a>
+                <a href="#"><img src="./assets/img/linkedin.png" alt=""></a>
+                <a href="#"><img src="./assets/img/github.png" alt=""></a>
+                <a href="#"><img src="./assets/img/fiverr.png" alt="" style=""></a>
             </div>
             <img src="./assets/img/persona-Inicio.png" class="column-6"></img>
         </section>
-        <section class="contact-me">
-            <a href="#"><img src="./assets/img/linkedin.png" alt="" class="img-contact"></a>
+        <!-- <section class="contact-me">
+            <a href="#"><img src="./assets/img/email.png" alt="" class="img-contact"></a>
             <a href="#"><img src="./assets/img/email.png" alt="" class="img-contact"></a>
             <a href="#"><img src="./assets/img/github.png" alt="" class="img-contact"></a>
             <a href="#"><img src="./assets/img/fiverr.png" alt="" class="img-contact"></a>
-        </section>
+        </section> -->
         <section class="about-me">
             <div class="container-about-me">
                 <h3>Quien soy</h3>
@@ -115,9 +119,10 @@
             <div class="col-md-8">
                 <h4>Shoot a message!</h4>
                 <form action="./services/sendEmail.php">
-                    <input style="margin-bottom: 2%; margin-right: 2%;" type="text" placeholder="Your name..." />
-                    <input style="margin-bottom: 2%;" type="text" placeholder="Your email..." required />
-                    <textarea style="width: 603px; height: 68px; padding: 3%;" name="" id="" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                    <input type="text" placeholder="Your name..." />
+                    <input placeholder="Your email..." required />
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                    <br />
                     <input type="submit" value="Send Message" />
                 </form>
             </div>
@@ -157,6 +162,37 @@
             param.className = 'active'
             console.log(document.querySelectorAll('nav a'))
         }
+
+        const colors = [
+            '#2196f3',
+            '#e91e63',
+            '#ffeb3b',
+            '#74ff1d'
+        ]
+// Animation vvvvvvvvv
+        function createSquare() {
+            const coverPage = document.querySelector('.cover-page');
+            const square = document.createElement('span');
+
+            var size = Math.random() * 50;
+
+            square.style.width = 20 + size + 'px';
+            square.style.height = 20 + size + 'px';
+
+            square.style.top = Math.random() * innerHeight + 'px'
+            square.style.right = Math.random() * innerWidth + 'px';
+
+            const bg = colors[Math.floor(Math.random() * colors.length)];
+            square.style.background = bg;
+
+            coverPage.appendChild(square);
+
+            setTimeout(() => {
+                square.remove();
+            }, 5000)
+        }
+
+        setInterval(createSquare , 100);
     </script>
 </body>
 </html>

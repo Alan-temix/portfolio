@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,32 +12,32 @@ nav {
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 100%;
-    max-height: 80px;
+    width: 100vw;
     z-index: 99;
-    box-shadow: 0 0 3px 1px black;
-    background-color: #ffb000;
+    box-shadow: 0 0 10px 2px black;
+    background-color: #8c3594;
     display: flex;
     justify-content: space-between;
+    min-height: 84px;
 }
 
 label.logo {
     font-size: 35px;
     font-weight: bold;
     color: black;
-    padding: 0 100px;
+    /* padding: 0 100px; */
     line-height: 80px;
     padding-left: 3.2%;
 }
 
 nav ul {
-    margin-right: 40px;
+    margin-right: 2em;
     list-style-type: none;
 }
 
 nav li {
     display: inline-block;
-    margin: 0 8px;
+    margin: 0 .5em;
     line-height: 80px;  
     line-height: 500%;
 }
@@ -60,23 +61,29 @@ nav #icon {
     color: white;
     font-size: 30px;
     line-height: 80px;
-    float: right;
     margin-right: 40px;
     cursor: pointer;
     display: none;
 }
 
 .cover-page {
+    background-color: #9528c3;
     display: flex;
     position: relative;
-    bottom: 1em;
-    margin-top: 110px;
+    /* bottom: 1em; */
+    /* margin-top: 110px; */
     padding: 1em;
+    padding-top: 8em;
+}
+
+.cover-page p, .cover-page h1, .cover-page img {
+    position: relative;
+    z-index: 11;
 }
 
 .column-6 p {
     background-color: transparent;
-    color: tomato;
+    color: #ffffff;
     font-weight: bolder;
 }
 
@@ -88,7 +95,6 @@ nav #icon {
 .cover-page img.column-6 {
     position: unset;
     width: 30%;
-    float: none;
     display: inline-block;
     margin-right: 5%;
     margin-left: 20%;
@@ -97,12 +103,12 @@ nav #icon {
 .contact-me {
     position: relative;
     margin-bottom: 3%;
-    width: 70%;
     padding-left: 3%;
+    background-color: #9528c3;
 }
 
 .contact-me .img-contact {
-    width: 15%;
+    width: 5%;
 }
 
 .container-about-me {
@@ -147,16 +153,21 @@ section.formulario {
 }
 
 section.formulario input {
-    width: 40%;
+    width: 49.6%;
     padding: 3%;
     background-color: #585f73;
     border: none;
+    margin: 2% auto;
+    /* margin-bottom: 2%; */
 }
 
 section.formulario textarea {
+    width: 100%;
     background-color: #585f73;
     border: none;
     margin-bottom: 3%;
+    /* height: 10%; */
+    padding: 2%
 }
 
 h2 {
@@ -236,22 +247,20 @@ section#education h2 {
     left: 2em;
 }
 
-
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 910px) { /*A partir de 910 px se va  ejecutar lo que este en corchetes */
     .cover-page {
         width: 100%;
-        margin-top: 110px;
-        max-width: none;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
+        /* margin-top: 6.3em; */
+        /* max-width: none; */
+        /* box-shadow: none; */
         display: flex;
-        padding: 0;
+        padding-top: 7%;
+        border-top: blueviolet solid 2px;
     }
 
     div.column-6 {
-        font-size: 300%;
+        font-size: 280%;
         padding-left: 3%;
         padding-top: .5em;
     }
@@ -259,14 +268,19 @@ section#education h2 {
     .cover-page img.column-6 {
         position: unset;
         width: 30%;
-        float: none;
         display: inline-block;
         margin-right: 5%;
         margin-left: 20%;
     }
 
+    .cover-page a img {
+        width: 50px; 
+        /* width: 10%; */
+        padding-bottom: 15px;
+    }
+
     .contact-me {
-        width: 40%;
+        /* width: 40%; */
         padding-left: 3%;
     }
 
@@ -326,6 +340,10 @@ section#education h2 {
     nav a {
         font-size: 17px;
     }
+
+    .cover-page a img {
+        width: 30px;
+    }
 }
 
 
@@ -338,7 +356,7 @@ section#education h2 {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: #fbbf24;
+        background-color: #8c3594;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -366,6 +384,10 @@ section#education h2 {
 
     .column-4-gde {
         width: 100%;
+    }
+
+    section.formulario {
+        display: block
     }
 
     .card-education {
